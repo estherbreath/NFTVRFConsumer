@@ -6,18 +6,26 @@ require('dotenv').config()
 const config: HardhatUserConfig = {
   solidity: '0.8.19',
   networks: {
-    sepolia: {
-      url: process.env.SEPOLIARPC,
+    goerli: {
+      url:" https://eth-goerli.g.alchemy.com/v2/JJsoBMXxBUe6nnvM9Dk0m8aTkvAralTf",
       //@ts-ignore
       accounts: [process.env.PRIVATEKEY],
+      coordinater: process.env.VRF_COORDINATOR,
+     linkToken: process.env.LINK_TOKEN,
+     hashKey: process.env.KEY_HASH,
+     fee: process.env.KEY
+     
+
     },
-    hardhat: {}
+    // hardhat: {}
   },
 
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: process.env.ETHERSCAN_API_KEY,
+    
+
   },
 }
 
