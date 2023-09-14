@@ -12,7 +12,15 @@ async function main() {
 
   console.log('MyNFT contract deployed to:', myNFT.target);
 
+  await ethers.myNFT._mint("0x77aC3a62c12333DD9604f8D5cD6E350Cd33D04b4", "1")
+
   // Mint NFTs here using myNFT.mint()
+
+  //  function requestRandomness() external onlyOwner {
+    //     // Generate a random number using Chainlink VRF
+    //     bytes32 requestId = requestRandomness(keyHash, fee);
+    // }
+
 }
 
 main()
